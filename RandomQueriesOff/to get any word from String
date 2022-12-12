@@ -1,0 +1,24 @@
+--to get ITI from coloumn 'Name' from table 'ITI_Approver_Rating'
+
+SELECT REPLACE(Name,'iti', UPPER(SUBSTRING(Name, CHARINDEX(' iti', Name, 4), 4)))
+FROM ITI_Approver_Rating
+where CHARINDEX(' iti', Name, 4) > 0
+
+
+--to set iti to ITI from coloumn 'Name' from table 'ITI_Approver_Rating'
+
+UPDATE ITI_Approver_Rating SET Name = REPLACE(Name,'iti', UPPER(SUBSTRING(Name, CHARINDEX(' iti', Name, 4), 4)))
+where CHARINDEX(' iti', Name, 4) > 0
+
+
+--to get itc from coloumn 'Name' from table 'ITI_Approver_Rating'
+
+SELECT REPLACE(Name,'itc', UPPER(SUBSTRING(Name, CHARINDEX(' itc', Name, 4), 4)))
+FROM ITI_Approver_Rating
+where CHARINDEX(' itc', Name, 4) > 0
+
+
+--to set itc to ITC from coloumn 'Name' from table 'ITI_Approver_Rating'
+
+UPDATE ITI_Approver_Rating SET Name = REPLACE(Name,'itc', UPPER(SUBSTRING(Name, CHARINDEX(' itc', Name, 4), 4)))
+where CHARINDEX(' itc', Name, 4) > 0
