@@ -1,0 +1,1 @@
+UPDATE ITI_Approver_Rating SET Name=UPPER(LEFT(Name,1))+LOWER(SUBSTRING(Name,2,LEN(Name))) 
