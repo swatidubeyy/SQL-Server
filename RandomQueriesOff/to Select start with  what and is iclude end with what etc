@@ -1,0 +1,52 @@
+--address starting with dot
+Select Name , Address FROM ITI_Approver_Rating where Address like '.%'; --4 rows
+
+--address starting with comma
+Select Name , Address FROM ITI_Approver_Rating where Address like ',%'; --226 rows
+
+--address starting with comma & blank space
+Select Name , Address FROM ITI_Approver_Rating where Address like ', %'; --1 72 rows
+
+--address which have space before comma
+Select Name , Address FROM ITI_Approver_Rating where Address like '% ,%'; --3579 rows
+ 
+if column name is 'Address' and Table name is 'ITI_Approver_Rating'
+
+--address which have Special char
+Select Name , Address FROM ITI_Approver_Rating where Address like '%@%'; --9 rows have @
+Select Name , Address FROM ITI_Approver_Rating where Address like '%#%'; --114 rows have #
+Select Name , Address FROM ITI_Approver_Rating where Address like '%$%'; --8 rows have $
+Select Name , Address FROM ITI_Approver_Rating where Address like '%&%'; --1543 rows have &
+Select Name , Address FROM ITI_Approver_Rating where Address like '%(%'; --3524 rows have (
+Select Name , Address FROM ITI_Approver_Rating where Address like '%)%'; --3334 rows have )
+Select Name , Address FROM ITI_Approver_Rating where Address like '%"%'; --5 rows have "
+Select Name , Address FROM ITI_Approver_Rating where Address like '%''%'; --110 rows have '
+Select Name , Address FROM ITI_Approver_Rating where Address like '%/%'; --3012 rows have /
+Select Name , Address FROM ITI_Approver_Rating where Address like '%..%'; --21 rows have ..
+Select Name , Address FROM ITI_Approver_Rating where Address like '%--%'; --68 rows have --
+Select Name , Address FROM ITI_Approver_Rating where Address like '%;%'; --556 rows have ;
+Select Name , Address FROM ITI_Approver_Rating where Address like '%:%'; --1654 rows have :
+Select Name , Address FROM ITI_Approver_Rating where Address like '%=%'; --17 rows have =
+Select Name , Address FROM ITI_Approver_Rating where Address like '%>%'; --8 rows have >
+Select Name , Address FROM ITI_Approver_Rating where Address like '%]%'; --41 rows have ]
+
+Select Name , Address FROM ITI_Approver_Rating where Address like '%,,%'; --73 rows have ,,
+Select Name , Address FROM ITI_Approver_Rating where Address like '%,.%'; --14 rows have ,.
+Select Name , Address FROM ITI_Approver_Rating where Address like '%.,%'; --284 rows have .,
+
+
+
+if column name is 'Name' and Table name is 'ITI_Approver_Rating'
+---------------------------------------------------------------------Name------------------------------------------------------------------
+
+--Names which have iit and iti in small letters
+SELECT LOWER(Name) AS LowercaseCustomerName FROM ITI_Approver_Rating; --65535
+
+Select Name , Address FROM ITI_Approver_Rating where Name like '%iti-%'; --284 rows have .,
+ 
+--Select Name, Address From ITI_Approver_Rating where LEFT(Name,1);
+
+SELECT UPPER(LEFT(Name,1))+LOWER(SUBSTRING(Name,2,LEN(Name))) FROM ITI_Approver_Rating
+
+--to edit
+UPDATE [ITI_Approver_Rating] SET Name=UPPER(LEFT(Name,1))+LOWER(SUBSTRING(Name,2,LEN(Name)))
