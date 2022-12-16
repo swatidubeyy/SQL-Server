@@ -1,0 +1,8 @@
+--To select distict Statements of any field or all the fields from table
+SELECT DISTINCT DeviceID , IMEINO FROM DeviceMaster_V1
+
+--To get count/no of rows after distinct select
+SELECT COUNT(DISTINCT DeviceID) FROM DeviceMaster_V1;
+
+--To get count/no of rows after distinct select
+SELECT COUNT(*) FROM DeviceMaster_V1;
