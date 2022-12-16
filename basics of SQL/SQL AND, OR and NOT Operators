@@ -1,0 +1,17 @@
+--The SQL AND, OR and NOT Operators  ------------>>>>>>>>>>>>>>>
+
+--AND Syntax ------------>>>>>>>>>> SELECT column1, column2, ... FROM table_name WHERE condition1 AND condition2 AND condition3 ...;
+SELECT * FROM DeviceMaster_V1 WHERE idDeviceMaster = 784 AND DeviceID = 19090036;
+
+
+--OR Syntax ------------>>>>>>>>>> SELECT column1, column2, ... FROM table_name WHERE condition1 OR condition2 OR condition3 ...;
+SELECT * FROM DeviceMaster_V1 WHERE DeviceID = 19090037 OR idDeviceMaster = 784;
+
+
+--NOT Syntax  ------------>>>>>>>>>> SELECT column1, column2, ... FROM table_name WHERE NOT condition;
+SELECT * FROM DeviceMaster_V1 WHERE NOT idDeviceMaster = 784;
+
+
+--Combining AND, OR and NOT ------------>>>>>>>>>> You can also combine the AND, OR and NOT operators.
+SELECT * FROM DeviceMaster_V1 WHERE RegistrationMessage = 'Successfully Registered' AND (DeviceID = 19090036 OR DeviceID = 19090037);
+SELECT * FROM DeviceMaster_V1 WHERE NOT DeviceID = 19090036 AND NOT DeviceID = 19090037;
