@@ -1,0 +1,37 @@
+--The SQL DELETE Statement -------->>>>>>>>>>>>The DELETE statement is used to delete existing records in a table.
+
+--DELETE Syntax -------->>>>>>>>>>>> DELETE FROM table_name WHERE condition; 
+--DELETE FROM DeviceMaster_V1 WHERE idDeviceMaster = '1744';
+
+--Note: Be careful when deleting records in a table! Notice the WHERE clause in the DELETE statement. The WHERE clause specifies
+--which record(s) should be deleted. If you omit the WHERE clause, all records in the table will be deleted!
+
+--DELETE FROM DeviceMaster_V1;
+
+
+
+/**************************************************************Task*********************************************************/
+
+
+
+
+CREATE TABLE Student(
+	ID int NOT NULL,
+	Roll_No int,
+	student_name varchar(255),
+	Father_Name varchar(255),
+	remark varchar(300),
+	PRIMARY KEY(ID)
+);
+
+
+INSERT INTO Student VALUES('1' , '3445' , 'swati' , 'RSD' , 'Best')
+INSERT INTO Student VALUES('2' , '3565' , 'Prachi' , 'RSD' , 'V Good')
+INSERT INTO Student VALUES('3' , '3805' , 'priya' , 'RSD' , 'better')
+INSERT INTO Student VALUES('4' , '3895' , 'shivam' , 'RSD' , 'Good')
+INSERT INTO Student VALUES('5' , '3005' , 'uma' , 'anil' , 'Good')
+SELECT * FROM Student WHERE student_name = 'priya';
+
+SELECT * FROM Student WHERE student_name LIKE 'p%';
+
+SELECT * FROM Student;
