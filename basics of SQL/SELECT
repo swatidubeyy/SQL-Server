@@ -1,0 +1,5 @@
+--To select all the data from table
+SELECT * FROM DeviceMaster_V1
+
+--To select 2 fields from table that is DeviceID , IMEINO
+SELECT DeviceID , IMEINO FROM DeviceMaster_V1;
