@@ -1,0 +1,43 @@
+--To select all data from table with WHERE clause(with sondition) with numeric field
+SELECT * FROM DeviceMaster_V1 WHERE IsActive = 0;
+
+
+/*To select all data from table with WHERE clause(with sondition) with null
+NOTE -->> given querry will give nothing because NULL has a special status in SQL. It represents the absence of value so,
+it cannot be used for comparison. If you use it for comparison, it will always return NULL. */
+SELECT * FROM DeviceMaster_V1 WHERE CreatedDate = NULL;
+
+--To select all data from table with WHERE clause(with sondition) with Text field
+SELECT * FROM DeviceMaster_V1 WHERE RegistrationMessage = 'Successfully Registered';
+
+
+--To select all data from table with WHERE clause(with sondition) with different Operators
+--EQUAL OPERATOR(=) ---->>>>>>>>> 
+SELECT * FROM DeviceMaster_V1 WHERE IsVehAssign = 0;
+
+-- Greater than OPERATOR(>) ---->>>>>>>>> 
+SELECT * FROM DeviceMaster_V1 WHERE idDeviceMaster > 200;
+
+-- less than OPERATOR(=) ---->>>>>>>>> 
+SELECT * FROM DeviceMaster_V1 WHERE idDeviceMaster < 200;
+
+-- less than or equal to OPERATOR(=) ---->>>>>>>>> 
+SELECT * FROM DeviceMaster_V1 WHERE idDeviceMaster <= 200;
+
+-- Greater than or equal to OPERATOR(=) ---->>>>>>>>> 
+SELECT * FROM DeviceMaster_V1 WHERE idDeviceMaster >= 200;
+
+-- NOT EQUAL TO OPERATOR(=! or <>) ---->>>>>>>>> 
+--  Note: In some versions of SQL this operator may be written as !=
+SELECT * FROM DeviceMaster_V1 WHERE idDeviceMaster != 200; --or
+SELECT * FROM DeviceMaster_V1 WHERE idDeviceMaster <> 200;
+
+-- LIKE  OPERATOR(LIKE ) ---->>>>>>>>> 
+SELECT * FROM DeviceMaster_V1 WHERE ModifiedBy LIKE 'a%'; --(NOT Case Sensitive parameter %)
+
+-- BETWEEN OPERATOR (BETWEEN) ---->>>>>>>>>
+SELECT * FROM DeviceMaster_V1 WHERE idDeviceMaster BETWEEN 200 AND 500;
+
+-- IN OPERATOR (IN) ---->>>>>>>>> 
+SELECT * FROM DeviceMaster_V1 WHERE idDeviceMaster IN (200 , 500);
+
