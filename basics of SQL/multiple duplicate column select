@@ -1,0 +1,13 @@
+ SELECT TCName, addressLine2, count(*) as qty 
+ FROM SIP_VW_TCMaster_SIP 
+ GROUP BY TCName, addressLine2 HAVING count(*)> 1
+ 
+ 
+result----->>>>>>
+ 
+TCName	                                              addressLine2	               qty
+Farida Classic Ambur	                                 NULL	                        2
+Kollam	                                               NULL	                        2
+BHARTIYA MAHILA TRAINING CENTER	                       -	                          2
+LEKHRAJ SINGH SHIKSHA SAMITI	                          -	                          3
+Rajendra Institute Of Education And Social Welfare	    -	                          4
