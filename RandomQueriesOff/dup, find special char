@@ -1,0 +1,81 @@
+/****** Script for SelectTopNRows command from SSMS  ******/
+SELECT TCName, addressLine2 FROM SIP_VW_TCMaster_SIP 
+
+SELECT TCName, addressLine2 FROM SIP_VW_TCMaster_SIP WHERE addressLine2 is NULL
+SELECT TCName, addressLine2 FROM SIP_VW_TCMaster_SIP WHERE TCName is NULL
+
+--Duplicate
+ SELECT TCName, addressLine2, count(*) as qty 
+ FROM SIP_VW_TCMaster_SIP 
+ GROUP BY TCName, addressLine2 HAVING count(*)> 1
+
+
+SELECT TCName, addressLine2 FROM SIP_VW_TCMaster_SIP where TCName LIKE '%@%'
+SELECT TCName, addressLine2 FROM SIP_VW_TCMaster_SIP where addressLine2 LIKE '%@%'
+
+SELECT TCName, addressLine2 FROM SIP_VW_TCMaster_SIP where TCName LIKE '%$%'
+
+SELECT TCName, addressLine2 FROM SIP_VW_TCMaster_SIP where TCName LIKE '%&%'
+SELECT TCName, addressLine2 FROM SIP_VW_TCMaster_SIP where addressLine2 LIKE '%&%'
+
+SELECT TCName, addressLine2 FROM SIP_VW_TCMaster_SIP where TCName LIKE '%(%'
+SELECT TCName, addressLine2 FROM SIP_VW_TCMaster_SIP where addressLine2 LIKE '%(%'
+
+SELECT TCName, addressLine2 FROM SIP_VW_TCMaster_SIP where TCName LIKE '%)%'
+SELECT TCName, addressLine2 FROM SIP_VW_TCMaster_SIP where addressLine2 LIKE '%)%'
+
+SELECT TCName, addressLine2 FROM SIP_VW_TCMaster_SIP where TCName LIKE '%.%'
+SELECT TCName, addressLine2 FROM SIP_VW_TCMaster_SIP where addressLine2 LIKE '%.%'
+
+SELECT TCName, addressLine2 FROM SIP_VW_TCMaster_SIP where TCName LIKE '% ,%'
+
+SELECT TCName, addressLine2 FROM SIP_VW_TCMaster_SIP where addressLine2 LIKE '.%'
+
+
+SELECT TCName, addressLine2 FROM SIP_VW_TCMaster_SIP where TCName LIKE '%..%'
+SELECT TCName, addressLine2 FROM SIP_VW_TCMaster_SIP where addressLine2 LIKE '%..%'
+
+
+SELECT TCName, addressLine2 FROM SIP_VW_TCMaster_SIP where TCName LIKE '%`%'
+SELECT TCName, addressLine2 FROM SIP_VW_TCMaster_SIP where addressLine2 LIKE '%`%'
+
+
+SELECT TCName, addressLine2 FROM SIP_VW_TCMaster_SIP where TCName LIKE '%"%'
+
+SELECT TCName, addressLine2 FROM SIP_VW_TCMaster_SIP where TCName LIKE '%,,%'
+
+SELECT TCName, addressLine2 FROM SIP_VW_TCMaster_SIP where TCName LIKE '%--%'
+SELECT TCName, addressLine2 FROM SIP_VW_TCMaster_SIP where addressLine2 LIKE '%--%'
+
+SELECT TCName, addressLine2 FROM SIP_VW_TCMaster_SIP where TCName LIKE '%-%'
+SELECT TCName, addressLine2 FROM SIP_VW_TCMaster_SIP where addressLine2 LIKE '%-%'
+
+SELECT TCName, addressLine2 FROM SIP_VW_TCMaster_SIP where TCName LIKE '%=%'
+SELECT TCName, addressLine2 FROM SIP_VW_TCMaster_SIP where addressLine2 LIKE '%=%'
+
+SELECT TCName, addressLine2 FROM SIP_VW_TCMaster_SIP where addressLine2 LIKE '%>%'
+
+
+SELECT TCName, addressLine2 FROM SIP_VW_TCMaster_SIP where TCName LIKE '%]%'
+SELECT TCName, addressLine2 FROM SIP_VW_TCMaster_SIP where addressLine2 LIKE '%]%'
+
+
+SELECT TCName, addressLine2 FROM SIP_VW_TCMaster_SIP where TCName LIKE '%;%'
+SELECT TCName, addressLine2 FROM SIP_VW_TCMaster_SIP where addressLine2 LIKE '%;%'
+
+SELECT TCName, addressLine2 FROM SIP_VW_TCMaster_SIP where TCName LIKE '%/%'
+SELECT TCName, addressLine2 FROM SIP_VW_TCMaster_SIP where addressLine2 LIKE '%/%'
+
+SELECT TCName, addressLine2 FROM SIP_VW_TCMaster_SIP where TCName LIKE '%  %'
+SELECT TCName, addressLine2 FROM SIP_VW_TCMaster_SIP where addressLine2 LIKE '%  %'
+
+SELECT TCName, addressLine2 FROM SIP_VW_TCMaster_SIP where TCName LIKE '%   %'
+SELECT TCName, addressLine2 FROM SIP_VW_TCMaster_SIP where addressLine2 LIKE '%   %'
+
+
+SELECT TCName, addressLine2 FROM SIP_VW_TCMaster_SIP where TCName LIKE '%iti%' or TCName LIKE '%jss%'
+SELECT TCName, addressLine2 FROM SIP_VW_TCMaster_SIP where addressLine2 LIKE '%iti%' 
+
+SELECT TCName, addressLine2 FROM SIP_VW_TCMaster_SIP where TCName LIKE '%jss%'
+SELECT TCName, addressLine2 FROM SIP_VW_TCMaster_SIP where addressLine2 LIKE '%jss%'
+
