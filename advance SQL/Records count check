@@ -1,6 +1,6 @@
 --To validate the source and target tables record count
 
 query --->>
-    SELECT COUNT(*) FROM vw_apprenticeship
+    SELECT COUNT(*) FROM "vw_apprenticeship"
     
 O/P --->> count : 7727593
