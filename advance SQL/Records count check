@@ -1,6 +1,6 @@
 --To validate the source and target tables record count
 
 query --->>
-    SELECT COUNT(*) FROM [PnMkbXgbqXwJbaE].[vw_apprenticeship_candidate_SIP_2.0_Data]
+    SELECT COUNT(*) FROM vw_apprenticeship
     
 O/P --->> count : 7727593
