@@ -1,0 +1,10 @@
+--Format validation of  Marks, LastDrawn Salary, Start Year, End Year, Start Month and End MonthFormat validation of  Marks,
+  LastDrawn Salary, Start Year, End Year, Start Month and End Month
+  
+Query ---->>>>
+          SELECT distinct DATA_TYPE
+          FROM INFORMATION_SCHEMA.COLUMNS
+          WHERE TABLE_NAME ='vw_apprenticeship_candidate_SIP_2.0_Data'
+          AND COLUMN_NAME IN ('Marks','Start_Year','Start_Month','End_Year','End_Month','Last Drawn Salary')
+          
+O/P --->>> varchar
