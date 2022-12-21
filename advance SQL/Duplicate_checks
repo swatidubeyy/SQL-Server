@@ -2,7 +2,7 @@
 
 query-->>
         SELECT ID, COUNT(*) as Duplicate 
-        FROM [PnMkbXgbqXwJbaE].[vw_apprenticeship]
+        FROM "vw_apprenticeship"
         GROUP BY ID HAVING COUNT(*) > 1
         
 O/P -->>
