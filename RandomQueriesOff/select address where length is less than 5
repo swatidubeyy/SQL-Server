@@ -1,0 +1,3 @@
+--select address where length is less than 5
+
+select address where length of address is less than 5
