@@ -1,3 +1,0 @@
---search the string having lower, upper, proper case values
-
-SELECT Name FROM ITI_Approver_Rating WHERE Name COLLATE Latin1_General_BIN  LIKE '%[A-Z] [a-z]%';
