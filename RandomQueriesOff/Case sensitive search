@@ -1,0 +1,7 @@
+We have SQL_Latin1_General_CP1_CI_AS performs case insensitive behaviour for the database.
+  We can change this collation to case sensitive collation.
+
+SELECT Name FROM ITI_Approver_Rating WHERE Name COLLATE Latin1_General_BIN  LIKE '%''S%';
+SELECT Name FROM ITI_Approver_Rating WHERE Name COLLATE Latin1_General_BIN  LIKE '%''s%';
+
+SELECT Name FROM ITI_Approver_Rating WHERE Name COLLATE Latin1_General_BIN  LIKE '%M%';
