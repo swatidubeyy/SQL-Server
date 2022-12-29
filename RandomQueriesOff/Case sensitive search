@@ -5,3 +5,6 @@ SELECT Name FROM ITI_Approver_Rating WHERE Name COLLATE Latin1_General_BIN  LIKE
 SELECT Name FROM ITI_Approver_Rating WHERE Name COLLATE Latin1_General_BIN  LIKE '%''s%';
 
 SELECT Name FROM ITI_Approver_Rating WHERE Name COLLATE Latin1_General_BIN  LIKE '%M%';
+
+SELECT Name FROM ITI_Approver_Rating WHERE Name COLLATE Latin1_General_BIN  LIKE '% iti %';
+SELECT Name FROM ITI_Approver_Rating WHERE Name COLLATE Latin1_General_BIN  LIKE '% ITI %';
