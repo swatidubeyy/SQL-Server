@@ -1,0 +1,2 @@
+--select address which is less than 5
+SELECT Address FROM ITI_Approver_Rating WHERE LEN(Address) <= 5;
