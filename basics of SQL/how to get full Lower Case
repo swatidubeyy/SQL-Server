@@ -1,0 +1,4 @@
+--to get Lower case
+SELECT Name FROM ITI_Approver_Rating WHERE Name COLLATE Latin1_General_BIN NOT LIKE '%[A-Z]%';
+
+SELECT Name FROM ITI_Approver_Rating WHERE Name != ' ' AND Name IS NOT NULL AND Name COLLATE Latin1_General_BIN NOT LIKE '%[A-Z]%';
